@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://www.websequencediagrams.com/ -->
+<html ng-app="myapp" ng-controller="MainController" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <title ng-bind="getFilename(true)" class="ng-binding">muistiinpanojen sivu</title>
+    <meta name="description" content="Draw sequence diagrams in seconds using
+    this free online tool.">
+    <link rel="stylesheet/less" type="text/css" href="./muistiinpanojen sivu_files/styles4.less"><style type="text/css" id="less:styles4">.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.transitions {
+  -webkit-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -moz-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -khtml-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -ms-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -o-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+}
+body.app {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body,
+select,
+input,
+textarea {
+  font-family: "Roboto Condensed", sans-serif;
+}
+select,
+input,
+textarea {
+  width: 100%;
+  border-radius: 3px;
+  font-size: 15px;
+  border: none;
+}
+input {
+  border-radius: 3px;
+  padding: 2px;
+  margin: 3px 0;
+}
+select:focus,
+input:focus,
+.whitebutton:focus,
+textarea:focus {
+  box-shadow: 0px 0px 5px #f79633;
+  outline: none;
+}
+a {
+  color: #f79633;
+}
+.header-image {
+  background-image: url(https://www.websequencediagrams.com/banner2.png);
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.header {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 64px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #666;
+}
+.header .header-buttons {
+  float: right;
+  background: rgba(102, 102, 102, 0.8);
+  padding-left: 10px;
+}
+.header .button {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 0 3px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -moz-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -khtml-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -ms-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -o-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+}
+.header .button img {
+  max-width: 40px;
+  max-height: 40px;
+  padding: 3px 0;
+}
+.header .button:hover {
+  background: #999;
+}
+.header .google-sign-in,
+.header .upgrade {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  margin: 10px 10px 0 0;
+  color: black;
+  -webkit-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -moz-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -khtml-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -ms-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -o-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+}
+.header .google-sign-in {
+  background: #4285f4;
+}
+.header .upgrade {
+  background: #f79633;
+}
+.header .upgrade:hover {
+  box-shadow: 0 0 5px #f79633;
+}
+.header .google-sign-in:hover {
+  box-shadow: 0 0 5px #4285f4;
+}
+.header .google-sign-in:hover,
+.header .upgrade:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -khtml-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  color: #fff;
+}
+.body {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#templateDiv {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  width: 100px;
+  background: white;
+  overflow: auto;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+.premium {
+  background: #ffa500;
+  display: inline-block;
+  font-family: arial, sans-serif;
+  font-size: 10px;
+  padding: 1px;
+  pointer-events: none;
+  vertical-align: middle;
+  line-height: 100%;
+}
+#templateDiv .image {
+  position: relative;
+  margin-top: 10px;
+}
+#templateDiv .image .premium {
+  position: absolute;
+  opacity: 0.8;
+  left: 20px;
+  top: -5px;
+}
+#text-pane {
+  position: absolute;
+  left: 100px;
+  width: 500px;
+  top: 0;
+  bottom: 0;
+}
+#text {
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#errors {
+  position: absolute;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ccc;
+  border-top: 1px solid #888;
+  overflow-y: scroll;
+}
+#errors .line-error {
+  border-radius: 3px;
+  color: #800000;
+  margin: 3px;
+  cursor: pointer;
+}
+#errors .line-error:hover {
+  background: #800000;
+  color: white;
+}
+#image-view {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 600px;
+  /*background: #ccc;*/
+}
+.slidingPanel {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #666;
+  color: white;
+  padding: 0.5em 1em;
+  width: 300px;
+  margin: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+  font-weight: bold;
+  overflow-y: auto;
+  top: 64px;
+  display: none;
+}
+.close {
+  -webkit-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -moz-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -khtml-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -ms-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -o-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.close img {
+  height: 25px;
+}
+.close:hover {
+  background-color: #aaa;
+}
+#menuPanel {
+  background: #666;
+}
+#menuPanel ul {
+  padding: 0;
+}
+#menuPanel li {
+  -webkit-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -moz-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -khtml-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -ms-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -o-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  list-style-type: none;
+  clear: both;
+  padding: 10px 0px;
+  font-weight: normal;
+  cursor: pointer;
+  padding-left: 44px;
+  border-radius: 5px;
+}
+#menuPanel li:hover {
+  background-color: #808080;
+}
+#menuPanel li img {
+  height: 36px;
+  position: absolute;
+  left: 16px;
+  padding: 0 3px;
+}
+#menuPanel li:first-line {
+  font-size: large;
+  font-weight: bold;
+}
+#stylePanel {
+  width: 190px;
+  background: #666;
+}
+#stylePanel div.holder {
+  width: 170px;
+  background: white;
+  border-radius: 10px;
+  border: 3px solid orange;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#stylePanel div.holder:hover {
+  border: 3px solid yellow;
+}
+#stylePanel img {
+  max-width: 160px;
+}
+.whitebutton {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -moz-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -khtml-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -ms-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -o-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 3px 3px 3px 0;
+  background: #ccc;
+  color: black;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: centre;
+  text-decoration: none;
+}
+.whitebutton:hover {
+  background: #fff;
+}
+.grow {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -moz-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -khtml-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -ms-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -o-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+}
+.grow:hover {
+  -webkit-transform: scale(1.05, 1.05) rotate(-5deg);
+  -moz-transform: scale(1.05, 1.05) rotate(-5deg);
+  -khtml-transform: scale(1.05, 1.05) rotate(-5deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-5deg);
+  -o-transform: scale(1.05, 1.05) rotate(-5deg);
+  transform: scale(1.05, 1.05) rotate(-5deg);
+}
+.dragtab {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  cursor: e-resize;
+}
+.error {
+  color: #ff0000;
+  text-shadow: 0px 0px 3px black;
+}
+.shrink-warning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #666;
+  color: white;
+  padding: 8px;
+  opacity: 0.9;
+  z-index: 1;
+}
+.fullPanel {
+  z-index: 1;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+.folderList {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  bottom: 0;
+  background: #666;
+  padding: 10px;
+  color: white;
+  overflow-y: auto;
+}
+.folderList .dragover {
+  color: white;
+}
+h1 {
+  margin: 0;
+}
+.fileList {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  left: 220px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  padding: 10px;
+  overflow-y: auto;
+}
+.fileList .button {
+  display: inline-block;
+  text-align: center;
+  font-size: 10px;
+  margin-left: 5px;
+  padding: 0 3px;
+  color: black;
+  cursor: pointer;
+}
+.fileList .button img {
+  max-width: 64px;
+  max-height: 64px;
+  padding: 3px 0;
+}
+@media (max-width: 1000px) {
+  .fileList {
+    font-size: 12px;
+  }
+  .fileList td,
+  .fileList th {
+    padding: 5px 5px 5px 0;
+  }
+}
+.folderSettings {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  left: 220px;
+  bottom: 0;
+  right: 0;
+  background: #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+.folderSettings input {
+  font-size: 20px;
+  width: 50%;
+}
+.folderSettings .whitebutton {
+  background: #666;
+}
+.filePreview {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  padding: 10px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 240px;
+  text-align: center;
+  overflow-y: auto;
+}
+.filePreview .title {
+  font-size: 120%;
+}
+.filePreview .imageHolder {
+  position: relative;
+  cursor: pointer;
+}
+.filePreview .openArrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -24px;
+  margin-left: -24px;
+  opacity: 0.7;
+}
+.folderitem,
+.fileitem,
+.shared-user {
+  -webkit-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -moz-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -khtml-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -ms-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -o-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  border-radius: 4px;
+  padding: 3px;
+  cursor: pointer;
+  color: black;
+}
+.folderitem img,
+.fileitem img,
+.shared-user img {
+  max-height: 18px;
+}
+.folderitem {
+  font-size: 18px;
+  position: relative;
+  padding-left: 31px;
+}
+.folderitem img {
+  position: absolute;
+  left: 3px;
+}
+table {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  text-align: left;
+  padding: 10px 5px 10px 0;
+  cursor: pointer;
+}
+tr:not(:first-child) {
+  border-top: 1px solid #aaa;
+}
+.folderitem:hover,
+.selected {
+  background: #ccc;
+}
+.fileitem:hover,
+.selected,
+.shared-user:hover {
+  background: #f79633;
+}
+.icon {
+  display: inline-block;
+  text-align: center;
+  font-size: 10px;
+  margin: 5px;
+}
+.icon img {
+  width: 64px;
+}
+.dialog {
+  z-index: 10;
+  color: white;
+  background: #666;
+  padding: 1em;
+  box-shadow: 5px 5px 5px black;
+  display: none;
+  max-width: 1000px;
+}
+.dialog h1 {
+  margin: 0 0 0.5em 0;
+}
+.dialog .buttons {
+  margin-top: 1em;
+}
+/******************************************************************************
+ FILE MERGING
+ *****************************************************************************/
+#conflictbar,
+#revisionbar {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #666;
+  color: white;
+  padding: 10px;
+}
+#diffs {
+  white-space: pre-wrap;
+  overflow-y: auto;
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#diffs,
+#errors {
+  font: 12px / normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+.deleted {
+  color: red;
+  text-decoration: line-through;
+}
+.inserted {
+  color: #008000;
+  font-style: italic;
+}
+/***
+ Administrative tools
+*/
+.admin-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  width: 280px;
+  background: #666;
+  padding: 10px;
+  color: white;
+}
+.admin-main {
+  position: absolute;
+  left: 300px;
+  top: 0;
+  overflow-y: scroll;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+.admin-button {
+  padding: 1.0em;
+  cursor: pointer;
+  -webkit-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -moz-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -khtml-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -ms-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  -o-transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+}
+.admin-button:hover {
+  background: #ccc;
+  color: black;
+}
+.admin-button.selected {
+  background: #ccc;
+  color: black;
+}
+.admin-option {
+  border: 5px solid transparent;
+  padding: 10px;
+  margin: 10px;
+  background: #ccc;
+  cursor: pointer;
+}
+.admin-option.selected {
+  border: 5px solid #f79633;
+}
+.admin-option:first-line {
+  font-weight: bold;
+}
+</style>
+    <link href="./muistiinpanojen sivu_files/css" rel="stylesheet" type="text/css">
+    <style>
+    .splashtitle {
+        animation-name: splash;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+    }
+    @keyframes splash {
+        from { 
+            -webkit-transform: scale(0.1, 0.1) rotate(-30deg); 
+            -moz-transform: scale(0.1, 0.1) rotate(-30deg); 
+            -ms-transform: scale(0.1, 0.1) rotate(-30deg);             
+        }
+        to { 
+            -webkit-transform: scale(1.0, 1.0); 
+            -moz-transform: scale(1.0, 1.0);             
+            -ms-transform: scale(1.0, 1.0);                         
+        }
+    }
+    </style>
+<style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style><style>.ace_variable { color: #004B5B !important; }</style></head>
+<body class="app">
+    <div id="splash" style="background: rgb(102, 102, 102); position: absolute; left: 0px; right: 0px; bottom: 0px; top: 0px; z-index: 10000; display: none;">
+        <div class="splashtitle" style="position:absolute;top:50%;left:50%;margin-left:-241px;margin-top:-100px;text-align:center;color:white">
+            Starting<br><br>
+            <img src="./muistiinpanojen sivu_files/banner2.png"><br>
+            <img src="./muistiinpanojen sivu_files/ajax-666.gif" id="splash-spinner">
+            <div id="problem" style="display:none;font-size:large">
+                Problem with Internet Connection
+                <br><br>
+                <input type="button" onclick="window.location.reload()" value="Try again" style="font-size: large">
+            </div>
+        </div>
+    </div>
+
+    <div class="header header-image">
+        <div ng-show="!showFileBrowser" class="header-buttons">
+            <div class="upgrade" ng-show="!subscribed() &amp;&amp; model.user.userid" ng-click="buyPage()" title="Get premium features">
+                Upgrade
+            </div>
+
+            <div class="google-sign-in ng-hide" id="google-signin" ng-show="model.user.userid==0 &amp;&amp; model.config.allowGoogleSignIn" onclick="DummyGoogleSignin()">
+                Sign in with Google
+            </div>
+
+            <div class="button ng-hide" ng-show="!model.user.userid &amp;&amp; !HIDE_USER_ACCOUNTS" ng-click="showPanel(&#39;signinPanel&#39;)">
+                <img src="./muistiinpanojen sivu_files/icon-user.png"><br>
+                Account
+            </div>
+
+            <div class="button" ng-click="showPanel(&#39;stylePanel&#39;)">
+                <img src="./muistiinpanojen sivu_files/icon-styles.png"><br>
+                Styles
+            </div>
+
+            <div class="button ng-hide" ng-show="model.zoomed &amp;&amp; model.allowZoom" ng-click="model.zoomed=false">
+                <img src="./muistiinpanojen sivu_files/icon-shrink.png"><br>
+                Zoom out
+            </div>
+
+            <div class="button" ng-show="!model.zoomed &amp;&amp; model.allowZoom" ng-click="model.zoomed=true">
+                <img src="./muistiinpanojen sivu_files/icon-enlarge.png"><br>
+                Zoom in
+            </div>
+
+            <div class="button" ng-click="showPanel(&#39;sharePanel&#39;)">
+                <img src="./muistiinpanojen sivu_files/icon-share.png"><br>
+                Share
+            </div>
+
+            <div class="button" ng-show="model.user.userid" ng-click="showPanel(&#39;changeAccountPanel&#39;)">
+                <img src="./muistiinpanojen sivu_files/icon-user.png"><br>
+                Account
+            </div>
+
+            <div class="button" ng-show="model.user.userid" ng-click="showFileBrowser=true">
+                <img src="./muistiinpanojen sivu_files/icon-myfiles.png"><br>
+                My files
+            </div>
+
+            <div class="button" ng-click="showPanel(&#39;menuPanel&#39;)">
+                <img src="./muistiinpanojen sivu_files/icon-more.png"><br>
+                More
+            </div>
+
+
+        </div>
+        <div ng-show="showFileBrowser" class="header-buttons ng-hide">
+            <div class="button" ng-click="showFileBrowser=false;showPanel(&#39;legacyOpen&#39;)">
+                <img src="./muistiinpanojen sivu_files/icon-upload.png"><br>
+                Import .txt
+            </div>
+            <div class="button" ng-click="showFileBrowser=false">
+                <img src="./muistiinpanojen sivu_files/icon-back.png"><br>
+                Back to Editing
+            </div>
+        </div>
+    </div>
+
+    <div class="body" ng-show="!showFileBrowser" style="transition-duration: 200ms; transform: translate(0px, 0px);">
+        <div id="templateDiv" ondragstart="return false;">
+            <div class="image"><img src="./muistiinpanojen sivu_files/t-signal.png" ng-click="onSignal(&#39;signal&#39;)"></div>
+            <div class="image"><img src="./muistiinpanojen sivu_files/t-dotted.png" ng-click="onSignal(&#39;dotted&#39;)"></div>
+            <div class="image"><img src="./muistiinpanojen sivu_files/t-activate.png" ng-click="onSignal(&#39;activate&#39;)"></div>
+            <div class="image"><img src="./muistiinpanojen sivu_files/t-self.png" ng-click="onSignal(&#39;self&#39;)"></div>
+            <div class="image"><img src="./muistiinpanojen sivu_files/t-create.png" ng-click="onSignal(&#39;create&#39;)"></div>
+            <div class="image"><img src="./muistiinpanojen sivu_files/t-alt.png" ng-click="onSignal(&#39;alt&#39;)"></div>
+            <div class="image"><img src="./muistiinpanojen sivu_files/t-opt.png" ng-click="onSignal(&#39;opt&#39;)"></div>
+            <div class="image"><img src="./muistiinpanojen sivu_files/t-loop.png" ng-click="onSignal(&#39;loop&#39;)"></div>
+            <div class="image"><img src="./muistiinpanojen sivu_files/t-notes.png" ng-click="onSignal(&#39;notes&#39;)"></div>
+            <div class="image">
+                <img src="./muistiinpanojen sivu_files/t-offpage.png" ng-click="onSignal(&#39;offpage&#39;)">
+                <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+            </div>
+            <div class="image">
+                <img src="./muistiinpanojen sivu_files/t-ref.png" ng-click="onSignal(&#39;ref&#39;)">
+                <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+            </div>
+            <div class="image">
+                <img src="./muistiinpanojen sivu_files/t-text.png" ng-click="onSignal(&#39;text&#39;)">
+                <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+            </div>
+            <div class="image">
+                <img src="./muistiinpanojen sivu_files/t-state.png" ng-click="onSignal(&#39;state&#39;)">
+                <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+            </div>
+            <div class="image">
+                <img src="./muistiinpanojen sivu_files/t-parallel.png" ng-click="onSignal(&#39;parallel&#39;)">
+                <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+            </div>
+            <div class="image">
+                <img src="./muistiinpanojen sivu_files/t-footer.png" ng-click="onSignal(&#39;footer&#39;)">
+                <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+            </div>
+        </div>
+
+        <div id="text-pane" style="width: 745px;">
+            <div id="conflictbar" ng-show="model.conflict.conflict" class="ng-hide">
+                Your file was not saved because you or someone else updated the file on the server. Please inspect the merged version and save again.<br>
+                <br>
+                Viewing:
+                <select ng-model="showDiffs" class="ng-pristine ng-untouched ng-valid">
+                    <option value="none">Automatically Merged</option>
+                    <option value="diffs">Differences</option>
+                    <option value="yours">Your version</option>
+                    <option value="theirs">Their version</option>
+                </select>
+            </div>
+            <div id="revisionbar" ng-show="!model.conflict.conflict &amp;&amp; !HIDE_USER_ACCOUNTS">
+                <div ng-show="showRevisions" class="">
+                    Revision history <div class="premium" ng-show="!subscribed()">PREMIUM</div><br>
+                    <select ng-model="revision" class="ng-pristine ng-untouched ng-valid">
+                        <option value="-1">Current</option>
+                        <!-- ngRepeat: r in model.file.revisions --><option ng-repeat="r in model.file.revisions" value="4" class="ng-binding ng-scope">Sat 2018-03-31 8:35:45</option><!-- end ngRepeat: r in model.file.revisions --><option ng-repeat="r in model.file.revisions" value="3" class="ng-binding ng-scope">Sat 2018-03-31 8:34:57</option><!-- end ngRepeat: r in model.file.revisions --><option ng-repeat="r in model.file.revisions" value="2" class="ng-binding ng-scope">Sat 2018-03-31 8:29:26</option><!-- end ngRepeat: r in model.file.revisions -->
+                        <option value="-1" ng-show="!subscribed() &amp;&amp; model.file.revisions.length &gt; 2" class="">Upgrade for more...</option>
+                    </select>
+                </div>
+                <div class="whitebutton" ng-show="model.diagram.text == model.file.originalText" ng-click="save()" title="Ctrl+S or ⌘+S" tabindex="0">Saved</div>
+                <div class="whitebutton ng-hide" ng-show="model.diagram.text != model.file.originalText" ng-click="save()" title="Ctrl+S or ⌘+S" tabindex="0">Not saved</div>
+            </div>
+            <div id="diffs" ng-show="showDiffs == &#39;diffs&#39;" class="ng-hide" style="top: 94px;"></div>
+            <div ace="" id="text" ng-model="model.diagram.text" ng-show="showDiffs != &#39;diffs&#39;" class="ng-untouched ng-valid ng-scope ace_editor ace-tm ng-dirty ng-valid-parse" style="top: 94px; bottom: 0px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.4px; width: 6.59775px; left: 51px; top: 230.4px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 581.8px; width: 47px;"><div class="ace_gutter-cell " style="height: 14.4px;">1</div><div class="ace_gutter-cell " style="height: 14.4px;">2</div><div class="ace_gutter-cell " style="height: 14.4px;">3</div><div class="ace_gutter-cell " style="height: 14.4px;">4</div><div class="ace_gutter-cell " style="height: 14.4px;">5</div><div class="ace_gutter-cell " style="height: 14.4px;">6</div><div class="ace_gutter-cell " style="height: 14.4px;">7</div><div class="ace_gutter-cell " style="height: 14.4px;">8</div><div class="ace_gutter-cell " style="height: 14.4px;">9</div><div class="ace_gutter-cell " style="height: 14.4px;">10</div><div class="ace_gutter-cell " style="height: 14.4px;">11</div><div class="ace_gutter-cell " style="height: 14.4px;">12</div><div class="ace_gutter-cell " style="height: 14.4px;">13</div><div class="ace_gutter-cell " style="height: 14.4px;">14</div><div class="ace_gutter-cell " style="height: 14.4px;">15</div><div class="ace_gutter-cell " style="height: 14.4px;">16</div><div class="ace_gutter-cell " style="height: 14.4px;">17</div></div><div class="ace_gutter-active-line" style="top: 230.4px; height: 14.4px;"></div></div><div class="ace_scroller" style="left: 47px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 698px; height: 581.8px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 531.82px; visibility: hidden;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.40000057220459px;top:230.40000915527344px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.40000057220459px"><span class="ace_variable ace_language">kayttaja</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_variable ace_language">selain</span>:</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_keyword">note left of</span><span class="ace_variable ace_language"> selain</span></div><div class="ace_line" style="height:14.40000057220459px">kayttaja kirjottaa osoiteriville</div><div class="ace_line" style="height:14.40000057220459px">https://fullstack-exampleapp.herokuapp.com/notes</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_keyword">end note</span></div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_variable ace_language">selain</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_variable ace_language">palvelin</span>: GET fullstack-exampleapp.herokuapp.com/notes</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_variable ace_language">palvelin</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_variable ace_language">selain</span>: status 200, sivun HTML-koodipalvelin-&gt;selain: status 200, c</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_variable ace_language">selain</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_variable ace_language">palvelin</span>: GET https://fullstack-exampleapp.herokuapp.com/main.css</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_variable ace_language">palvelin</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_variable ace_language">selain</span>: status 200, main.css CSS-tyylitiedoston lataus </div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_variable ace_language">selain</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_variable ace_language">palvelin</span>: GET https://fullstack-exampleapp.herokuapp.com/main.js</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_variable ace_language">palvelin</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_variable ace_language">selain</span>: status 200, main.js-nimisen Javascript-tiedoston lataus</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_variable ace_language">selain</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_variable ace_language">palvelin</span>: GET https://fullstack-exampleapp.herokuapp.com/data.json</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_variable ace_language">palvelin</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_variable ace_language">selain</span>: status 200, muistiinpanot JSON-muotoisena “raakadatana”</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_keyword">note left of</span><span class="ace_variable ace_language"> selain</span></div><div class="ace_line" style="height:14.40000057220459px"> selain näyttää palvelimen palauttaman HTML:n</div><div class="ace_line" style="height:14.40000057220459px"><span class="ace_keyword">end note</span></div><div class="ace_line" style="height:14.40000057220459px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 230.4px; width: 6.59775px; height: 14.4px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 244.8px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="height: 22px; left: 47px; right: 0px; display: none;"><div class="ace_scrollbar-inner" style="height: 22px; width: 516px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+            <div id="errors" ng-show="model.diagram.errors.length &amp;&amp; showDiffs != &#39;diffs&#39;" class="ng-hide">
+                <!-- ngRepeat: error in model.diagram.errors -->
+            </div>
+        </div>
+        <div id="image-view" style="overflow: auto; text-align: center; left: 845px;"><img src="https://www.websequencediagrams.com/index.php?png=mscMVONsF" width="691" style="cursor: pointer; top: 50%; margin-top: -225.5px; left: 0px; margin-left: 0px; position: absolute;">
+            <div class="shrink-warning ng-hide" ng-show="!noshrinkwarning &amp;&amp; model.shrunk">
+                Your diagram is too wide for the free version so it has been
+                <b>shrunk to fit and may appear blurry</b>. <a ng-click="buyPage()" href="javascript:void(0)">Subscribe now</a> to get access to
+                full quality diagrams and premium features. <a href="javascript:void(0)" ng-click="noshrinkwarning=1">Hide this</a>
+            </div>
+        <img src="./muistiinpanojen sivu_files/ajax-loader.gif" style="position: absolute; left: 50%; top: 50%; display: none; z-index: 100; margin-top: -16px; margin-left: -16px;"></div>
+        <div drag-tab="" class="dragtab" left="#text-pane" right="#image-view" style="left: 845px;"></div>
+    </div>
+    <div class="slidingPanel" id="stylePanel" style="display: none; transition-property: transform; transform: translate(0px, 0px);">
+        <div close=""><div class="close" ng-click="hidePanel()"><img src="./muistiinpanojen sivu_files/icon-back.png"></div></div>
+        <!-- ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-default.png" title="default" src="./muistiinpanojen sivu_files/style-default.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-rose.png" title="rose" src="./muistiinpanojen sivu_files/style-rose.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-qsd.png" title="qsd" src="./muistiinpanojen sivu_files/style-qsd.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-napkin.png" title="napkin" src="./muistiinpanojen sivu_files/style-napkin.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-vs2010.png" title="vs2010" src="./muistiinpanojen sivu_files/style-vs2010.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-patent.png" title="patent" src="./muistiinpanojen sivu_files/style-patent.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-omegapple.png" title="omegapple" src="./muistiinpanojen sivu_files/style-omegapple.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-modern-blue.png" title="modern-blue" src="./muistiinpanojen sivu_files/style-modern-blue.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-earth.png" title="earth" src="./muistiinpanojen sivu_files/style-earth.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-roundgreen.png" title="roundgreen" src="./muistiinpanojen sivu_files/style-roundgreen.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles --><div ng-repeat="style in model.styles" class="ng-scope">
+            <div class="holder">
+                <img ng-click="model.diagram.style=style" ng-src="style-magazine.png" title="magazine" src="./muistiinpanojen sivu_files/style-magazine.png">
+            </div>
+        </div><!-- end ngRepeat: style in model.styles -->
+    </div>
+
+    <div class="slidingPanel" id="menuPanel" style="display: none; transition-property: transform; transform: translate(332px, 0px); left: 1204px; transition-duration: 200ms;">
+        <div close=""><div class="close" ng-click="hidePanel()"><img src="./muistiinpanojen sivu_files/icon-back.png"></div></div>
+        <ul ng-click="hidePanel(&#39;menuPanel&#39;)">
+        <li ng-click="openUrl(&#39;examples.html&#39;, &#39;_blank&#39;)">
+            <img src="./muistiinpanojen sivu_files/icon-help.png" title="Help">Help<br>Getting started
+        </li><li ng-click="newClicked()">
+            <img src="./muistiinpanojen sivu_files/icon-new.png">New<br>Create a new diagram
+        </li><li ng-show="!model.user.userid" ng-click="showPanel(&#39;legacyOpen&#39;)" class="ng-hide">
+            <img src="./muistiinpanojen sivu_files/icon-open.png">Open<br>Open a file
+        </li><li ng-show="model.user.userid &amp;&amp; model.file.fileid" ng-click="save()" class="">
+            <img src="./muistiinpanojen sivu_files/icon-save.png">Save<br>Update the saved copy (Ctrl+S)
+        </li><li ng-show="model.user.userid" ng-click="showPanel(&#39;savePanel&#39;)" class="">
+           <img src="./muistiinpanojen sivu_files/icon-save-as.png" title="Save as">Save As...<br>Save as a new file
+        </li><li ng-click="showPanel(&#39;exportPanel&#39;)">
+            <img src="./muistiinpanojen sivu_files/icon-export.png" title="Export">Export<br>Export to Image or PDF
+        </li><li ng-click="print()">
+            <img src="./muistiinpanojen sivu_files/icon-print.png" title="Print">Print<br>Print the document
+        </li><li ng-click="openUrl(&#39;embedding.html&#39;, &#39;_blank&#39;)">
+            <img src="./muistiinpanojen sivu_files/icon-api.png" title="Application Programming
+            Interface">API<br>Integrate with other services
+        </li><li ng-click="buyPage()" ng-show="model.gold">
+            <img src="./muistiinpanojen sivu_files/icon-buy.png" title="Pricing">Buy<br>
+            <span ng-show="!subscribed()">Activate premium features</span>
+            <span ng-show="subscribed()" class="ng-hide">Get a subscription for the rest of
+            your team.</span>
+        </li><li ng-show="model.user.admin==&#39;1&#39;" ng-click="openUrl(&#39;admin.html&#39;, &#39;_blank&#39;)" class="admin ng-hide">
+            Administrative Tools<br>Manage user passwords                
+        </li><li ng-show="!model.gold" ng-click="openUrl(&#39;status.html&#39;, &#39;_blank&#39;)" class="purchased ng-hide">
+            <img src="./muistiinpanojen sivu_files/icon-status.png" title="Server
+            information">Status<br>Server &amp; Licensing information
+        </li><li onclick="window.open(&#39;mailto:support@websequencediagrams.com&#39;, &#39;_blank&#39;)" ng-show="model.gold">
+            <img src="./muistiinpanojen sivu_files/icon-ask.png" title="Ask a question">Ask a
+                question<br>support@websequencediagrams.com
+        </li><li onclick="window.open(&#39;mailto:support@websequencediagrams.com&#39;, &#39;_blank&#39;)" ng-show="!model.gold" class="ng-hide">
+            <img src="./muistiinpanojen sivu_files/icon-support.png" title="Email support">
+                Support<br>support@websequencediagrams.com
+        </li><li ng-show="!model.gold &amp;&amp; !LICENSE_VALID" ng-click="showPanel(&#39;productKeyPanel&#39;)" class="ng-hide">
+            <img src="./muistiinpanojen sivu_files/icon-productkey.png">Enter Product Key
+        </li><li ng-show="model.user.userid" ng-click="signOut()" class="">
+            <img src="./muistiinpanojen sivu_files/icon-exit.png">Sign out<br>
+        </li></ul>
+    </div>
+
+    <div class="slidingPanel ng-scope" id="signinPanel" ng-controller="SigninController" style="display: none; transition-property: transform; transform: translate(0px, 0px);">
+        <!-- ngInclude: 'signin.html' --><div ng-include="&#39;signin.html&#39;" class="ng-scope"><div ng-controller="SigninController" class="ng-scope">
+<div style="text-align: center"><img src="./muistiinpanojen sivu_files/ajax-bar.gif" style="visibility:hidden" id="login-spinner"></div>
+<div class="ng-binding"><br></div>
+<div ng-bind="errorText" class="error ng-binding"></div>
+<span ng-show="model.config.signInMethod!==&#39;ldap&#39;">Email</span>
+<span ng-show="model.config.signInMethod===&#39;ldap&#39;" "="" class="ng-hide">Username</span><br>
+<input type="text" ng-model="email" class="text focus ng-pristine ng-untouched ng-valid"> <br>
+<br>
+Password<br>
+<input ng-model="password" type="password" class="text ng-pristine ng-untouched ng-valid" enter-submit="ok()"> <br>
+<br>
+<div class="whitebutton" id="login-ok" ng-click="ok()" tabindex="0">OK</div>
+<div class="whitebutton" id="login-cancel" tabindex="0" ng-click="hidePanel()">Cancel</div>
+
+<div>
+<div class="whitebutton ng-hide" ng-show="model.gold &amp;&amp; !isMainPage()" id="google-signin2" tabindex="0" onclick="DummyGoogleSignin()">Sign in with Google</div>
+</div>
+
+<br>
+<br>
+<br>
+<a ng-click="forgotPassword()" href="javascript:void(0)">
+    I don't know my password
+</a><br>
+<br>
+<a ng-show="model.config.signInMethod==&#39;user-managed&#39;" ng-click="showPanel(&#39;createAccountPanel&#39;)" href="javascript:void(0)">
+    Create Account
+</a>
+<div ajax=""><div ng-show="working" style="text-align:center" class="ng-hide"><img src="./muistiinpanojen sivu_files/ajax-666.gif"></div></div>
+</div></div>
+    </div>
+    <div class="slidingPanel ng-scope" id="createAccountPanel" ng-controller="SigninController" style="display: none; transition-property: transform; transform: translate(0px, 0px);">
+        <!-- ngInclude: 'createaccount.html' --><div ng-include="&#39;createaccount.html&#39;" class="ng-scope"><div ng-controller="SigninController" class="ng-scope">
+Create an account<br>
+<br>
+Email<br>
+<input type="text" ng-model="email" class="text focus ng-pristine ng-untouched ng-valid"> <br>
+<br>
+Password<br>
+<input ng-model="password" type="password" class="text ng-pristine ng-untouched ng-valid"> <br>
+<br>
+Re-enter Password<br>
+<input ng-model="password2" type="password" class="text ng-pristine ng-untouched ng-valid" enter-submit="createAccount()"> <br>
+<br>
+<div class="whitebutton" ng-click="createAccount()" tabindex="0">OK</div>
+<div class="whitebutton" tabindex="0" ng-click="hidePanel()">Cancel</div>
+<div ajax=""><div ng-show="working" style="text-align:center" class="ng-hide"><img src="./muistiinpanojen sivu_files/ajax-666.gif"></div></div>
+<div ng-bind="errorText" class="error ng-binding"></div>
+</div></div>
+    </div>
+    
+    <div class="slidingPanel ng-scope" id="resetPasswordPanel" ng-controller="SigninController" style="display: none; transition-property: transform; transform: translate(0px, 0px);">
+        New password<br>
+        <input type="password" class="focus ng-pristine ng-untouched ng-valid" ng-model="password"><br>
+        <br>
+        Re-enter new password<br>
+        <input type="password" ng-model="password2" enter-submit="resetPassword()" class="ng-pristine ng-untouched ng-valid"><br>
+        <br>
+        <div class="whitebutton" ng-click="resetPassword()" enter-submit="" tabindex="0">OK</div><br>
+        <div ajax=""><div ng-show="working" style="text-align:center" class="ng-hide"><img src="./muistiinpanojen sivu_files/ajax-666.gif"></div></div>
+        <div ng-bind="errorText" class="error ng-binding"></div>
+    </div>
+
+    <div class="slidingPanel ng-scope" id="changeAccountPanel" ng-controller="SigninController" style="display: none; transition-property: transform; transform: translate(332px, 0px); left: 1204px; transition-duration: 200ms;">
+        <div close=""><div class="close" ng-click="hidePanel()"><img src="./muistiinpanojen sivu_files/icon-back.png"></div></div>
+        <div ng-show="model.user.subscriptionid" class="ng-binding ng-hide">
+            Your account is paid until January 1, 1970.
+            <span ng-show="hasCancelled()" class="ng-binding ng-hide">You cancelled payments on January 1, 1970.</span><br>
+            <a class="whitebutton ng-hide" ng-href="http://www.websequencediagrams.com/receipts.py?user=" ng-show="subscriptionPrefix(&#39;ST-&#39;) || subscriptionPrefix(&#39;I-&#39;)" tabindex="0" href="http://www.websequencediagrams.com/receipts.py?user=">View Receipts</a>
+            <div ng-show="!hasCancelled() &amp;&amp; subscriptionPrefix(&#39;ST-&#39;)" class="whitebutton ng-hide" tabindex="0" ng-click="updateCreditCard()">
+                Update Credit Card
+            </div>
+
+            <div ng-show="!hasCancelled() &amp;&amp; (subscriptionPrefix(&#39;ST-&#39;) || subscriptionPrefix(&#39;I-&#39;))" class="whitebutton ng-hide" tabindex="0" ng-click="cancelPayments()">
+                Cancel payments
+            </div><br>
+
+            <br>
+        </div>
+        <div ng-show="!model.user.subscriptionid &amp;&amp; model.gold">
+            Premium users have a button here to cancel payments with one click. It's that easy. Why not <a href="https://www.websequencediagrams.com/order.html">upgrade today?</a>
+            <br><br>
+        </div>
+
+        <div ng-show="hasOauthMethod(&#39;google&#39;) &amp;&amp; model.config.allowGoogleSignIn" class="">
+            You can currentl y sign in using Google.<br>
+            <div class="whitebutton" tabindex="0" ng-click="removeOauth(&#39;google&#39;)">Remove</div><br>
+            <br>
+        </div>
+        <div ng-show="!hasOauthMethod(&#39;google&#39;) &amp;&amp; model.config.allowGoogleSignIn" class="ng-hide">
+            You do not currently sign in using Google.<br>
+            <div class="whitebutton" tabindex="0" id="add-google-signin" onclick="DummyGoogleSignin()">Add Google Signin</div><br>
+            <br>
+        </div>
+        <div ng-show="model.config.signInMethod !== &#39;ldap&#39;">
+            You can change your email or password.<br>
+            <br>
+            New email
+            <input type="text" class="focus ng-pristine ng-valid ng-touched" ng-model="email"><br>
+            <br>
+            <div ng-show="model.user.hasPassword" class="ng-hide">
+                Current password<br>
+                <input type="password" ng-model="currentPassword" class="ng-pristine ng-untouched ng-valid"><br>
+                <br>
+            </div>
+            New Password
+            <input type="password" ng-model="password" class="ng-pristine ng-untouched ng-valid"><br>
+            <br>
+            Re-enter new password
+            <input type="password" ng-model="password2" class="ng-pristine ng-untouched ng-valid"><br>
+            <br>
+            <div class="whitebutton" tabindex="0" ng-click="changeAccount()">Change</div>
+            <div class="whitebutton" tabindex="0" ng-click="hidePanel()">Cancel</div><br>
+            <div ajax=""><div ng-show="working" style="text-align:center" class="ng-hide"><img src="./muistiinpanojen sivu_files/ajax-666.gif"></div></div>
+            <div ng-bind="errorText" class="error ng-binding"></div>
+        </div>
+        <hr>
+        <div class="whitebutton" tabindex="0" ng-click="signOut()">Sign out</div>
+    </div>
+
+    <div class="slidingPanel ng-scope" id="legacyOpen" ng-controller="LegacyOpenController" style="display: none; transition-property: transform; transform: translate(0px, 0px);">
+        You may select a text file from your computer to open below. 
+        <span ng-hide="HIDE_USER_ACCOUNTS || model.user.userid" class="ng-hide">Sign in to access files stored in your account.</span>
+        <br>
+        <br>
+        <input type="file" id="uploadInput">
+        <br>
+        <br>
+        <div class="whitebutton" ng-click="ok()" tabindex="0">OK</div>
+        <div class="whitebutton" ng-click="hidePanel()" tabindex="0">Cancel</div>
+    </div>
+
+    <div class="slidingPanel ng-scope" id="exportPanel" ng-controller="ExportController" style="display: none; transition-property: transform; transform: translate(332px, 0px); left: 1204px; transition-duration: 200ms;">
+        <div close=""><div class="close" ng-click="hidePanel()"><img src="./muistiinpanojen sivu_files/icon-back.png"></div></div>
+        <div class="grow" ng-click="exportFile(&#39;png&#39;)">
+            <img src="./muistiinpanojen sivu_files/icon-png.png" alt="png">
+        </div>
+        <div class="grow" ng-click="exportFile(&#39;txt&#39;)">
+            <img src="./muistiinpanojen sivu_files/icon-txt.png" alt="txt">
+        </div>
+        <div class="grow" style="text-align: center" ng-click="exportFile(&#39;png&#39;, true)">
+            <img src="./muistiinpanojen sivu_files/icon-png-high.png" alt="HQ PNG"><br>
+            <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+        </div>
+        <div class="grow" style="text-align: center" ng-click="showPanel(&#39;pdfPanel&#39;)">
+            <img src="./muistiinpanojen sivu_files/icon-pdf.png" alt="pdf"><br>
+            <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+        </div>
+        <div class="grow" style="text-align: center" ng-click="exportFile(&#39;svg&#39;)">
+            <img src="./muistiinpanojen sivu_files/icon-svg.png" alt="svg"><br>
+            <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+        </div>
+    </div>
+    <div class="slidingPanel ng-scope" id="pdfPanel" ng-controller="ExportController" style="display: none; transition-property: transform; transform: translate(332px, 0px); left: 1204px; transition-duration: 200ms;">
+        <div class="close" ng-click="showPanel(&quot;exportPanel&quot;)">
+            <img src="./muistiinpanojen sivu_files/icon-back.png">
+        </div>
+        Paper Size<br>
+        <select ng-model="paper" class="ng-pristine ng-untouched ng-valid">
+            <option selected="selected" value="none">None</option>
+            <option value="letter">Letter</option>
+            <option value="a4">A4</option>
+            <option value="11x17">11x17</option>
+            <option value="a1">A1</option>
+            <option value="a2">A2</option>
+            <option value="a3">A3</option>
+            <option value="legal">legal</option>
+        </select><br>
+        <br>
+        Orientation<br>
+        <select ng-model="orientation" ng-disabled="paper==&#39;none&#39;" class="ng-pristine ng-untouched ng-valid" disabled="disabled">
+            <option value="portrait">Portrait</option>
+            <option value="landscape">Landscape</option>
+        </select><br>
+        <br>
+        <div class="whitebutton" ng-click="exportFile(&#39;pdf&#39;)" tabindex="0">Export PDF</div>
+        <div class="whitebutton" ng-click="hidePanel()" tabindex="0">Cancel</div><br>
+        <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+    </div>
+
+
+    <div class="slidingPanel ng-scope" id="productKeyPanel" ng-controller="ProductKeyController" style="display: none; transition-property: transform; transform: translate(0px, 0px);">
+        Enter your product key to activate the software.<br>
+        <br>
+        <textarea rows="8" class="focus ng-pristine ng-untouched ng-valid" ng-model="productKey"></textarea><br>
+        <div class="whitebutton" ng-click="ok()" tabindex="0">Activate</div>
+        <div ajax=""><div ng-show="working" style="text-align:center" class="ng-hide"><img src="./muistiinpanojen sivu_files/ajax-666.gif"></div></div>
+    </div>
+
+    <div class="slidingPanel ng-scope" id="sharePanel" ng-controller="ShareController" style="display: none; transition-property: transform; transform: translate(0px, 0px);">
+        <div close=""><div class="close" ng-click="hidePanel()"><img src="./muistiinpanojen sivu_files/icon-back.png"></div></div>
+        A link to this image that updates when you save it.
+        <div class="premium" ng-show="!subscribed()">PREMIUM</div>
+        <input readonly="" select-on-click="" ng-model="updatingLink" class="ng-pristine ng-untouched ng-valid"><br>
+        <br>
+        Link to this image (non-updating)<br>
+        <input readonly="" select-on-click="" ng-model="staticLink" class="ng-pristine ng-untouched ng-valid"><br>
+        <br>
+        Link to this page (non-updating)<br>
+        <input readonly="" select-on-click="" ng-model="pageLink" class="ng-pristine ng-untouched ng-valid"><br>
+        <br>
+        Link to open the current file<br>
+        <input readonly="" select-on-click="" ng-model="fileLink" class="ng-pristine ng-untouched ng-valid"><br>
+
+        <br>
+        <div class="whitebutton" ng-click="hidePanel()" tabindex="0">OK</div>
+        <div ajax=""><div ng-show="working" style="text-align:center" class="ng-hide"><img src="./muistiinpanojen sivu_files/ajax-666.gif"></div></div>
+    </div>
+
+    <div class="slidingPanel ng-scope" id="savePanel" ng-controller="SaveController" style="display: none; transition-property: transform; transform: translate(332px, 0px); left: 1204px; transition-duration: 200ms;">
+        The diagram will be stored on our server, and only you and people you choose will be able to access it.<br>
+        <br>
+        Name of Diagram<br>
+        <input type="text" ng-model="filename" class="focus ng-valid ng-touched ng-dirty ng-valid-parse" select-on-click="" enter-submit="save()"><br>
+        <br>
+        Save in folder<br>
+        <select ng-model="folderid" class="ng-pristine ng-valid ng-touched">
+            <option value="0">My private files</option>
+            <!-- ngRepeat: f in folders -->
+        </select><br>
+        <div class="whitebutton" ng-click="save()" tabindex="0">Save</div>
+        <div class="whitebutton" ng-click="hidePanel()" tabindex="0">Cancel</div>
+    </div>
+
+    <div class="fullPanel ng-scope ng-hide" id="filesPanel" ng-controller="FileController" ng-show="showFileBrowser">
+        <div class="folderList">
+            <h1>Files</h1>
+            <div class="folderitem selected" ng-class="{selected:folder==0}" ng-click="folder=0" drop-data="0" ng-drop="dropOnFolder">
+                <img src="./muistiinpanojen sivu_files/icon-folder.png"> All files
+            </div>
+            <!-- ngRepeat: f in folders -->
+
+            <div class="folderitem" style="color:white" ng-click="newFolder()">
+                <img src="./muistiinpanojen sivu_files/icon-new-folder.png"> New folder
+            </div>
+            <div ajax=""><div ng-show="working" style="text-align:center" class="ng-hide"><img src="./muistiinpanojen sivu_files/ajax-666.gif"></div></div>
+            <br>
+            Find by name<br>
+            <input ng-model="searchText" type="text" enter-submit="folder=0" class="ng-pristine ng-untouched ng-valid"><br>
+            <div class="whitebutton" ng-click="folder=0" tabindex="0">Find</div>
+            <div class="whitebutton" ng-click="searchText=&#39;&#39;" tabindex="0">Clear</div>
+            <br><br>
+
+            Create a folder to organize your work. Folders can be  shared with others so you can edit the same diagrams.
+        </div>
+        <div class="folderSettings ng-hide" ng-show="folderSettings">
+            <h1 class="ng-binding"></h1>
+        
+            <div class="whitebutton" ng-click="renameFolder()" tabindex="0">Rename folder</div>
+
+            <div class="whitebutton" ng-click="deleteFolder()" tabindex="0">Delete folder</div>
+            <br>
+            <br>
+            <h1>Sharing</h1>
+            Send this link to someone else to invite them to edit your files in this folder.<br>
+            <input readonly="" select-on-click="" ng-model="shareUrl" class="ng-pristine ng-untouched ng-valid"><br>
+            <br>
+            This folder is currently shared with:<br>
+            <br>
+            <div ng-show="sharedUsers.length == 0">Nobody</div>
+            <!-- ngRepeat: u in sharedUsers -->
+            <br>
+   
+            <div ng-show="!model.gold" class="whitebutton ng-hide" ng-click="addUser()" tabindex="0">Add</div>
+            <div ng-show="model.gold" class="whitebutton" ng-click="inviteUser()" tabindex="0">Invite</div>
+            <div class="whitebutton ng-hide" ng-show="selectedUser" ng-click="removeUser(selectedUser.userid, selectedUser.email)" tabindex="0">Remove</div>
+        
+        </div>
+        <div class="fileList" ng-show="!folderSettings" style="width: 1036px;">
+            <h1>&nbsp;</h1>
+            <div ng-show="files.length==0" class="ng-hide">
+                There are no matching files here.
+            </div>
+            <table>
+                <tbody><tr>
+                    <th ng-click="sort(&#39;name&#39;)">Name</th>
+                    <th ng-click="sort(&#39;date&#39;)">Date</th>
+                </tr>
+                <tr class="fileitem" ng-click="newClicked(folder)">
+                    <td colspan="2">
+                        <img src="./muistiinpanojen sivu_files/icon-new-in-folder.png"> Create a New Diagram Here
+                    </td>
+                </tr>
+                <!-- ngRepeat: f in files --><tr ng-repeat="f in files" class="fileitem ng-scope selected" ng-click="$parent.file=f" ng-dblclick="openFile(f)" ng-class="{selected: f.fileid==file.fileid}">
+                    <td drag-data="358231" class="ng-binding" draggable="true">muistiinpanojen sivu</td>
+                    <td class="ng-binding">in 2 hours</td>
+                </tr><!-- end ngRepeat: f in files -->
+            </tbody></table>
+            <br>
+            <div class="button grow ng-hide" ng-show="folder" ng-click="folderSettings=1">
+                <img src="./muistiinpanojen sivu_files/icon-folder-settings.png"><br>
+                Folder Settings<br>
+                &amp; Sharing
+            </div>
+        </div>
+        <div class="filePreview" ng-show="!folderSettings">
+            <div ng-show="file" class="ng-binding">
+                <div class="title ng-binding">muistiinpanojen sivu</div>
+                <br>
+                <div class="imageHolder">
+                    <img ng-click="openFile(file)" ng-src="/files/render?fileid=358231&amp;width=200&amp;height=200" src="./muistiinpanojen sivu_files/render">
+                    <img class="openArrow" src="./muistiinpanojen sivu_files/icon-play.png" ng-click="openFile(file)">
+                </div>
+                <br>
+                Modified on March 31, 2018<br>
+                <br>
+                <div class="icon grow">
+                    <img src="./muistiinpanojen sivu_files/icon-rename2.png" ng-click="rename()"><br>
+                    Rename
+                </div>
+                <div class="icon grow" ng-click="trash()">
+                    <img src="./muistiinpanojen sivu_files/icon-trash.png"><br>
+                    Delete
+                </div>
+                <div class="icon grow" ng-click="move()">
+                    <img src="./muistiinpanojen sivu_files/icon-move.png"><br>
+                    Change folder
+                </div>
+                <div class="icon grow" ng-click="duplicate()">
+                    <img src="./muistiinpanojen sivu_files/icon-duplicate.png"><br>
+                    Duplicate
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog ng-scope" id="PromptDialog" ng-controller="PromptController" style="position: fixed; display: none; z-index: 10; left: 50%; top: 50%; margin-left: -171px; margin-top: -88.5px;">
+        <h1 class="ng-binding">Move a file</h1>
+        <div class="ng-binding">
+            Select the folder where you want to move the file.
+        </div>
+        <select ng-show="options" ng-model="selected" class="ng-pristine ng-valid ng-touched">
+            <!-- ngRepeat: o in options --><option ng-repeat="o in options" value="0" class="ng-binding ng-scope">My files</option><!-- end ngRepeat: o in options -->
+        </select>
+        <div ng-show="text != null" class="ng-hide">
+            <input ng-model="text" ng-class="{focus: text != null}" enter-submit="ok()" class="ng-pristine ng-untouched ng-valid">
+        </div>
+        <div class="buttons" style="text-align: right">
+            <div class="whitebutton focus ng-binding" ng-click="ok()" tabindex="0">Move</div>
+            <div class="whitebutton" ng-show="cancel" ng-click="cancelClicked()" tabindex="0">Cancel</div>
+        </div>
+    </div>
+
+    <textarea style="display:none" id="initial-message">title Authentication Sequence
+
+Alice-&gt;Bob: Authentication Request
+note right of Bob: Bob thinks about it
+Bob-&gt;Alice: Authentication Response
+</textarea>
+
+
+    <script src="./muistiinpanojen sivu_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript">
+        var LICENSE_VALID = true;
+        var WSDCONFIG = {"allowGoogleSignIn":true,"enterprise":true,"googleClientId":"601465063395-uvfu1qlq6h35uspge15eeel1tgmulmf9.apps.googleusercontent.com","signInMethod":"user-managed"};
+    </script>
+
+<script src="./muistiinpanojen sivu_files/scripts4.js.lataus" charset="utf-8"></script><script src="./muistiinpanojen sivu_files/platform.js.lataus" async="async" defer="defer" gapi_processed="true"></script>
+<script>
+    if ( !window.IsWebEdition ) {
+        window.IsWebEdition = function() { return false; };
+    }
+    if ( IsWebEdition() ) {
+        // Stripe checkout
+        document.write(unescape('%3Cscript src="https://checkout.stripe.com/checkout.js"%3E%3C/script%3E'));
+
+        // Google tracking
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+
+    if ( IsWebEdition() && "_gat" in window ) {
+        var pageTracker = _gat._getTracker("UA-5751047-1");
+        pageTracker._trackPageview();
+    }
+</script><script src="./muistiinpanojen sivu_files/checkout.js.lataus"></script><script src="./muistiinpanojen sivu_files/ga.js.lataus" type="text/javascript"></script>
+<script>
+    try {
+        if ( !("wsdok" in window) ) {
+            document.getElementById("problem").style.display = "block";
+            document.getElementById("splash-spinner").style.visibility = "hidden";
+        }
+    } catch (e) {
+        Tracker.event("exception", "error=" + encodeURIComponent(""+e));
+        throw e;
+    }
+</script>
+
+
+
+<script src="./muistiinpanojen sivu_files/tracker.py.lataus"></script><div style="border-width: 4px; border-radius: 3px; border-color: rgba(255, 165, 0, 0.5); display: none; position: absolute; z-index: 1; border-style: solid; pointer-events: none; left: 881.103px; top: 236.999px; width: 281.634px; height: 16.3393px;"></div><div style="overflow: hidden; position: fixed; width: 691px; height: 39.3315px; top: 64px; left: 845px; pointer-events: none; display: block;"><div style="position: absolute; left: 0px; width: 691px; height: 39.3315px;"><div style="background-image: url(&quot;index.php?png=mscMVONsF&quot;); background-repeat: no-repeat; background-position: -621.206px -7.71205px; background-size: 691px 451px; position: absolute; left: 621.206px; top: 0px; width: 61.6964px; height: 39.3315px; display: none;"></div><div style="background-image: url(&quot;index.php?png=mscMVONsF&quot;); background-repeat: no-repeat; background-position: -291.13px -7.71205px; background-size: 691px 451px; position: absolute; left: 291.13px; top: 0px; width: 53.9844px; height: 39.3315px; display: none;"></div><div style="background-image: url(&quot;index.php?png=mscMVONsF&quot;); background-repeat: no-repeat; background-position: -7.71205px -7.71205px; background-size: 691px 451px; position: absolute; left: 7.71205px; top: 0px; width: 64.01px; height: 39.3315px; display: none;"></div></div></div><iframe frameborder="0" allowtransparency="true" src="./muistiinpanojen sivu_files/index-5b7eb47b5e330ba7639ee7a27de2e6e5.html" name="stripe_checkout_app" class="stripe_checkout_app" style="z-index: 2147483647; display: none; background: rgba(0, 0, 0, 0.004); border: 0px none transparent; overflow-x: hidden; overflow-y: auto; visibility: visible; margin: 0px; padding: 0px; -webkit-tap-highlight-color: transparent; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;"></iframe><iframe aria-hidden="true" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="./muistiinpanojen sivu_files/iframe.html" style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;"></iframe><script src="./muistiinpanojen sivu_files/tracker.py(1).lataus"></script><div class=" ace_editor ace_autocomplete ace-tm" style="top: 206.4px; height: 50.4px; left: 515.072px; display: none;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0;"></textarea><div class="ace_gutter" style="display: none;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px;"></div><div class="ace_gutter-active-line" style="display: none;"></div></div><div class="ace_scroller" style="left: 0px; right: 0px; bottom: 0px;"><div class="ace_content" style="cursor: default; margin-top: 0px; width: 280px; height: 84px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 531.82px; visibility: hidden;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:16.80000114440918px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line ace_selected" style="height:16.80000114440918px"><span class="ace_completion-highlight">note</span><span class="ace_"> over </span><span class="ace_rightAlignedText">keyword</span></div><div class="ace_line" style="height:16.80000114440918px"><span class="ace_completion-highlight">note</span><span class="ace_"> left of </span><span class="ace_rightAlignedText">keyword</span></div><div class="ace_line" style="height:16.80000114440918px"><span class="ace_completion-highlight">note</span><span class="ace_"> right of </span><span class="ace_rightAlignedText">keyword</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors" style="opacity: 0;"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59775px; height: 16.8px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 50.4px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 0px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 280px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div><script src="./muistiinpanojen sivu_files/tracker.py(2).lataus"></script><script src="./muistiinpanojen sivu_files/tracker.py(3).lataus"></script><script src="./muistiinpanojen sivu_files/tracker.py(3).lataus"></script><script src="./muistiinpanojen sivu_files/tracker.py(3).lataus"></script><script src="./muistiinpanojen sivu_files/tracker.py(3).lataus"></script></body></html>
