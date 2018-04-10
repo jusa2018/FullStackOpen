@@ -1,0 +1,16 @@
+kayttaja->selain:
+note left of selain
+k‰ytt‰j‰ kirjoittaa tekstikentt‰‰n jotain ja painaa nappia tallenna
+end note
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/spa
+palvelin->selain: status 200 OK 
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: status 200, selain lataa palvelimelta osoitteesta main.css sivulla k‰ytett‰v‰ CSS-tyylitiedosto.
+selain->palvelin: https://fullstack-exampleapp.herokuapp.com/spa.js
+palvelin->selain: status 200, muistiinpanot JSON-muotoisena ìraakadatanaî
+selain->palvelin: POST  https://fullstack-exampleapp.herokuapp.com/new_note
+palvelin->selain: Status Code: 201 Created
+
+note left of selain
+ selain n‰ytt‰‰ palvelimen palauttaman HTML:n
+end note

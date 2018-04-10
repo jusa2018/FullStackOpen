@@ -1,0 +1,18 @@
+kayttaja->selain:
+note left of selain
+k‰ytt‰j‰ kirjoittaa tekstikentt‰‰n jotain ja painaa nappia tallenna
+end note
+
+selain->palvelin: POST  https://fullstack-exampleapp.herokuapp.com/new_note
+palvelin->selain: Status Code: 302 Found , sivun HTML-koodipalvelin->selain: status 200, c
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/notes
+palvelin->selain: status 200, sivun HTML-koodipalvelin->selain: status 200, c
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: status 200, main.css CSS-tyylitiedoston lataus 
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.js
+palvelin->selain: status 200, main.js-nimisen Javascript-tiedoston lataus
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin->selain: status 200, muistiinpanot JSON-muotoisena ìraakadatanaî
+note left of selain
+ selain n‰ytt‰‰ palvelimen palauttaman HTML:n
+end note
